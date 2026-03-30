@@ -1,4 +1,4 @@
-public class UC5 {
+public class UC6 {
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Hello, World!");
@@ -6,15 +6,13 @@ public class UC5 {
         }
 
         StringBuilder sb = new StringBuilder("Hello, ");
-        int i = 0;
+
         for (String name : args) {
-            sb.append(name);
-            if (i < args.length - 1) {
-                sb.append(", ");
-            }
-            i++;
+            sb.append(name).append(", ");
         }
-        sb.append("!");
-        System.out.println(sb.toString());
+
+        String result = sb.substring(0, sb.length() - 2);
+
+        System.out.println(result + "!");
     }
 }
